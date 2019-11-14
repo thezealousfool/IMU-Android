@@ -23,20 +23,15 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     override fun onSensorChanged(event: SensorEvent?) {
         when(event?.sensor?.type) {
-            Sensor.TYPE_LINEAR_ACCELERATION -> {
-                accXValue.text = "%.2f".format(event?.values?.get(0)?:0)
-                accYValue.text = "%.2f".format(event?.values?.get(1)?:0)
-                accZValue.text = "%.2f".format(event?.values?.get(2)?:0)
-            }
             Sensor.TYPE_GYROSCOPE -> {
                 gyroXValue.text = "%.2f".format(event?.values?.get(0)?:0)
                 gyroYValue.text = "%.2f".format(event?.values?.get(1)?:0)
                 gyroZValue.text = "%.2f".format(event?.values?.get(2)?:0)
             }
             Sensor.TYPE_GRAVITY -> {
-                gravXValue.text = "%.2f".format(event?.values?.get(0)?:0)
-                gravYValue.text = "%.2f".format(event?.values?.get(1)?:0)
-                gravZValue.text = "%.2f".format(event?.values?.get(2)?:0)
+                accXValue.text = "%.2f".format(event?.values?.get(0)?:0)
+                accYValue.text = "%.2f".format(event?.values?.get(1)?:0)
+                accZValue.text = "%.2f".format(event?.values?.get(2)?:0)
             }
             Sensor.TYPE_MAGNETIC_FIELD -> {
                 magXValue.text = "%.2f".format(event?.values?.get(0)?:0)

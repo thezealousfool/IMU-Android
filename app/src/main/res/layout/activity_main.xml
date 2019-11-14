@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -26,7 +28,7 @@
 
         <TextView
             android:id="@+id/logoText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/app_name"
@@ -35,17 +37,14 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/accCard"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:cardCornerRadius="8dp"
-        app:contentPadding="16dp"
         app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linearLayout">
+        app:contentPadding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,15 +57,15 @@
                 android:layout_height="wrap_content"
                 android:text="Accelerometer"
                 android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:isScrollContainer="false">
 
@@ -83,9 +82,9 @@
 
                     <TextView
                         android:id="@+id/accXValue"
-                        android:layout_width="50dp"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="+0.00"
+                        android:text="0.00"
                         android:textAlignment="textEnd" />
 
                     <TextView
@@ -109,9 +108,9 @@
 
                     <TextView
                         android:id="@+id/accYValue"
-                        android:layout_width="wrap_content"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="+0.00"
+                        android:text="0.00"
                         android:textAlignment="textEnd" />
 
                     <TextView
@@ -134,9 +133,9 @@
 
                     <TextView
                         android:id="@+id/accZValue"
-                        android:layout_width="wrap_content"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="+0.00"
+                        android:text="0.00"
                         android:textAlignment="textEnd" />
 
                     <TextView
@@ -154,18 +153,14 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/gyroCard"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         app:cardCornerRadius="8dp"
-        app:contentPadding="16dp"
         app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accCard">
+        app:contentPadding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -178,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:text="Gyroscope"
                 android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -203,9 +198,9 @@
 
                     <TextView
                         android:id="@+id/gyroXValue"
-                        android:layout_width="50dp"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="+0.00"
+                        android:text="0.00"
                         android:textAlignment="textEnd" />
 
                     <TextView
@@ -229,9 +224,9 @@
 
                     <TextView
                         android:id="@+id/gyroYValue"
-                        android:layout_width="wrap_content"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="+0.00"
+                        android:text="0.00"
                         android:textAlignment="textEnd" />
 
                     <TextView
@@ -254,9 +249,9 @@
 
                     <TextView
                         android:id="@+id/gyroZValue"
-                        android:layout_width="wrap_content"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="+0.00"
+                        android:text="0.00"
                         android:textAlignment="textEnd" />
 
                     <TextView
@@ -273,139 +268,15 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/gravCard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        app:cardCornerRadius="8dp"
-        app:contentPadding="16dp"
-        app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gyroCard">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/gravText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Gravity"
-                android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:isScrollContainer="false">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/gravXLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="16dp"
-                        android:text="X-Axis" />
-
-                    <TextView
-                        android:id="@+id/gravXValue"
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:text="+0.00"
-                        android:textAlignment="textEnd" />
-
-                    <TextView
-                        android:id="@+id/gravXUnit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:text="m/s²" />
-
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/gravYLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Y-Axis" />
-
-                    <TextView
-                        android:id="@+id/gravYValue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+0.00"
-                        android:textAlignment="textEnd" />
-
-                    <TextView
-                        android:id="@+id/gravYUnit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:text="m/s²" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/gravZLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Z-Axis" />
-
-                    <TextView
-                        android:id="@+id/gravZValue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+0.00"
-                        android:textAlignment="textEnd" />
-
-                    <TextView
-                        android:id="@+id/gravZUnit"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="4dp"
-                        android:text="m/s²" />
-                </TableRow>
-            </TableLayout>
-
-        </LinearLayout>
-
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
         android:id="@+id/magCard"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         app:cardCornerRadius="8dp"
-        app:contentPadding="16dp"
         app:cardElevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gravCard">
+        app:contentPadding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -418,7 +289,7 @@
                 android:layout_height="wrap_content"
                 android:text="Magnetometer"
                 android:textAlignment="viewStart"
-                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -443,9 +314,9 @@
 
                     <TextView
                         android:id="@+id/magXValue"
-                        android:layout_width="50dp"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="+0.00"
+                        android:text="0.00"
                         android:textAlignment="textEnd" />
 
                     <TextView
@@ -469,9 +340,9 @@
 
                     <TextView
                         android:id="@+id/magYValue"
-                        android:layout_width="wrap_content"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="+0.00"
+                        android:text="0.00"
                         android:textAlignment="textEnd" />
 
                     <TextView
@@ -494,9 +365,9 @@
 
                     <TextView
                         android:id="@+id/magZValue"
-                        android:layout_width="wrap_content"
+                        android:layout_width="70dp"
                         android:layout_height="wrap_content"
-                        android:text="+0.00"
+                        android:text="0.00"
                         android:textAlignment="textEnd" />
 
                     <TextView
@@ -512,4 +383,4 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
